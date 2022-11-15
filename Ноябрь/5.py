@@ -1,9 +1,8 @@
-#O(n^2)
-prices = [8, 6, 7, 7]
-result = len(prices)
-for i in range(len(prices)):
-    for j in range(i + 1, len(prices)):
-        if prices[i] - prices[j] == 1:
-            print(prices[i], prices[j])
-            result += 1
-print(result)
+#O(n - 1)
+prices = [3, 2, 1, 4]
+n = len(prices)
+dp = [1] * n
+for i in range(1, n):
+	if prices[i] + 1 == prices[i-1]:
+		dp[i] += dp[i-1]
+print(sum(dp))
