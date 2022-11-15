@@ -1,4 +1,4 @@
-
+#O(n^2)
 prices = [8, 6, 7, 7]
 result = len(prices)
 for i in range(len(prices)):
